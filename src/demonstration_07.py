@@ -13,4 +13,9 @@ Examples:
 """
 def nth_smallest(lst, n):
     # Your code here
+    if len(lst) >= n:
+        sorted_list = sorted(lst) #sorts the array accendetly
+        return sorted_list[n-1]
 
+print(nth_smallest([7, 5, 3, 1], 1))
+print(nth_smallest([1, 3, 5, 7], 5))
