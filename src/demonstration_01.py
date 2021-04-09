@@ -10,4 +10,8 @@ Examples:
 """
 def addition(a, b):
     # Your code here
+    print("i am inside the function")
+    return a + b
 
+print("this lives outside the function")
+print(addition(-3,-1))

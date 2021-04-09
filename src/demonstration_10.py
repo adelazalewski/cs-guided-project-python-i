@@ -15,4 +15,9 @@ Notes:
 """
 def get_discounts(nums, percentage):
     # Your code here
+    for num in nums:
+        dicount = format(percentage/100)
+        transform_percentage = num * dicount
 
+        return transform_percentage
+print(get_discounts([2, 4, 6, 11], "50%"))

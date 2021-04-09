@@ -12,4 +12,10 @@ Examples:
 """
 def sort_by_length(lst):
     # Your code here
+    #sorted_list = sorted(lst, key=lambda str_item: len(str_item))
+    return sorted(lst, key=len)
 
+print(sort_by_length(["a", "ccc", "dddd", "bb"]))
+
+# .sort() it changes the original array
+#sorted() creates a copy of the original array and changes it
