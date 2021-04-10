@@ -14,4 +14,13 @@ Notes:
 """
 def mapping(letters):
     # Your code here
-
+    new_dictionary = {}
+    for value in letters:
+       new_value =  value.upper()
+       new_dictionary[value] = new_value
+    return new_dictionary
+        
+    
+print(mapping(["p", "s"]))
+print(mapping(["a", "b", "c"]))
+print(mapping(["a", "v", "y", "z"]))

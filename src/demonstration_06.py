@@ -17,4 +17,20 @@ Examples:
 """
 def XO(txt):
     # Your code here
+    txt = txt.lower()
+    num_x= txt.count("x")
+    num_o = txt.count("o")
+    if num_o == num_x:
+        return True
+    elif num_x == num_o == 0:
+        return True
+    else:
+        return False
+
+print(XO("ooxx"))
+print(XO("xooxx"))
+print(XO("ooxXm"))
+print(XO("zpzpzpp"))
+print(XO("zzoo"))
+
 
