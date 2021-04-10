@@ -13,11 +13,20 @@ Notes:
 "75%" to 12 would be 9 as opposed to taking off 75% (making 3)).
 - There won't be any awkward decimal numbers, only 0.5 to deal with.
 """
+import math
 def get_discounts(nums, percentage):
     # Your code here
+    new_percentage = list(percentage)
+    discount_str = int(new_percentage[0] + new_percentage[1]) 
+    discount = int(discount_str) / 100
+    print(discount)
+    d = []
     for num in nums:
-        dicount = format(percentage/100)
-        transform_percentage = num * dicount
-
-        return transform_percentage
+        num = discount * num
+        s = str(num)
+        new_num = int(s.rstrip(".0")) if ".0" in s else float(s)
+        d.append(new_num)
+    return d
 print(get_discounts([2, 4, 6, 11], "50%"))
+print(get_discounts([10, 20, 40, 80], "75%"))
+print(get_discounts([100], "45%"))
